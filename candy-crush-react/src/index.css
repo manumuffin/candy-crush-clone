@@ -1,16 +1,6 @@
 .app {
   display: flex;
-  padding: 30px;
-}
-
-.game {
-  width: 560px; /* 560 because it's nicely dividable by 8 since ther are 8 rows & columns */
-  height: 560px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.game img {
-  width: 70px; /* is one eighth of the game board width */
-  height: 70px;
+  justify-content: center;
+  padding: 5rem 0;
+  background-color: #F8F7FF;
 }

@@ -1,6 +1,9 @@
 import './App.css';
 import { useState, useEffect } from 'react'
 import ScoreBoard from './components/ScoreBoard';
+import { Gameboard } from './components/Gameboard.styles';
+import { Candy } from './components/Candy.styles';
+
 import blueCandy from './images/blue-candy.png'
 import greenCandy from './images/green-candy.png'
 import orangeCandy from './images/orange-candy.png'
@@ -180,9 +183,9 @@ const App = () => {
 
   return (
     <div className="app">
-      <div className="game">
+      <Gameboard>
         {currentColorArrangement.map((candyColor, index) => (
-          <img
+          <Candy
             key={index}
             src={candyColor}
             alt={candyColor}
@@ -196,7 +199,7 @@ const App = () => {
             onDragEnd={(dragEnd)}
           />
         ))}
-      </div>
+      </Gameboard>
       <ScoreBoard score={scoreDisplay}></ScoreBoard>
     </div>
   );
